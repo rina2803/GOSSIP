@@ -1,0 +1,29 @@
+
+
+
+
+  <br/>
+<br/>
+<br/>
+
+
+      <p>L'auteur: <%= @gossip.user.first_name %> <%= @gossip.user.last_name %></p>
+
+   <p>Ville: <%= @gossip.user.city.name%> </p>
+
+      <h5 ><%= @gossip.title %></h5>
+        <h2><strong><em><% @gossip.tags.each do |tag| %><br>
+            Tag:  <%= tag.title%><br>
+
+    <%end%></em></strong></h2>
+
+      <p ><%= @gossip.content %></p>
+
+ <%= link_to "Profil", user_path(@gossip.user.id)%>
+  <%= link_to "A propos de city", city_path(@gossip.user.city.id)%>
+   <%= link_to "edit gossip", edit_gossip_path%>
+   <%= link_to "commentaires", gossip_comment_path(params[:id]) %>
+   <a href="<%= gossip_path(@gossip.id) %>" data-confirm="Are you sure ?" data-method="delete">Delete</a>
+
+<h2>Commentaires (<%= @gossip_comments_count %>)</h2>
+
