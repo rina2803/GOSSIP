@@ -1,0 +1,22 @@
+
+
+<br/><br/><br/><br/>
+
+
+        
+        <h2>Edit gossip</h2>
+        <%= form_for @gossip do |gossip| %>
+          <p>
+            <%= gossip.label :title %><br>
+            <%= gossip.text_field :title %>
+          </p>
+
+          <p>
+            <%= gossip.label :content %><br>
+            <%= gossip.text_area :content %>
+          </p>
+        
+          <p>
+            <%= gossip.submit %>
+          </p>
+        <% end %>

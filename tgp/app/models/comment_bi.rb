@@ -1,0 +1,2 @@
+class CommentBi < ApplicationRecord
+end

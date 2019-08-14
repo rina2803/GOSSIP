@@ -1,0 +1,15 @@
+<br/><br/><br/><br/>
+
+
+
+      <p>first name: <%= @user.first_name %></p>
+       <p>last name: <%= @user.last_name %></p>
+       <p>email: <%= @user.email %></p>
+       <p>description: <%= @user.description %></p>
+       <p>age: <%= @user.age %></p>
+
+   <p>Ville: <%= @user.city.name%> </p>
+
+   <%= link_to "A propos de city", city_path(@user.city.id)%>
+
+
